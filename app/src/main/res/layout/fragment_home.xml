@@ -95,7 +95,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/bg_camera_circle"
-            android:contentDescription="더보기"
+            android:contentDescription="추가"
             android:scaleType="centerInside"
             android:src="@drawable/ic_home_plus"
             tools:ignore="TouchTargetSizeCheck" />

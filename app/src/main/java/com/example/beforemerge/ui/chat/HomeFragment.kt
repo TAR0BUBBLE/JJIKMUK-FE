@@ -1,4 +1,4 @@
-package com.example.beforemerge
+package com.example.beforemerge.ui.chat
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
+import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -15,6 +16,7 @@ import android.widget.Switch
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.beforemerge.R
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -53,10 +55,24 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         layoutSelectedProfiles = view.findViewById(R.id.layoutSelectedProfiles)
 
+        val etHomeMessage = view.findViewById<EditText>(R.id.etHomeMessage)
+        val btnSend = view.findViewById<ImageButton>(R.id.btnSend)
+
         updateSelectedProfileImages()
 
         layoutSelectedProfiles.setOnClickListener {
             showScanTargetPopup(layoutSelectedProfiles)
+        }
+
+        btnSend.setOnClickListener {
+            val message = etHomeMessage.text.toString().trim()
+
+            if (message.isEmpty()) return@setOnClickListener
+
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.mainContainer, ChatFragment.newInstance(message))
+                .addToBackStack(null)
+                .commit()
         }
     }
 

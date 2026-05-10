@@ -1,7 +1,10 @@
-package com.example.beforemerge
+package com.example.beforemerge.ui.chat
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.beforemerge.R
+
 class ChatHomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
