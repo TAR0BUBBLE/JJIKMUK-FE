@@ -116,7 +116,7 @@
             tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
-            android:id="@+id/etHomeMessage"
+            android:id="@+id/etChatMessage"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -142,7 +142,7 @@
             tools:ignore="TouchTargetSizeCheck"/>
 
         <ImageButton
-            android:id="@+id/btnSend"
+            android:id="@+id/btnChatSend"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="16dp"

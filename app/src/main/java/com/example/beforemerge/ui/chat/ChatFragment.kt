@@ -12,7 +12,12 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.beforemerge.R
+import com.example.beforemerge.ui.adapter.RecommendProductAdapter
+import com.example.beforemerge.ui.model.RecommendProduct
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class ChatFragment : Fragment() {
 
@@ -34,8 +39,8 @@ class ChatFragment : Fragment() {
 
         scrollChatMessages = view.findViewById(R.id.scrollChatMessages)
         layoutChatMessages = view.findViewById(R.id.layoutChatMessages)
-        etChatMessage = view.findViewById(R.id.etHomeMessage)
-        btnChatSend = view.findViewById(R.id.btnSend)
+        etChatMessage = view.findViewById(R.id.etChatMessage)
+        btnChatSend = view.findViewById(R.id.btnChatSend)
 
         val btnChatBack = view.findViewById<ImageButton>(R.id.btnChatBack)
         val tvChatTitle = view.findViewById<TextView>(R.id.tvChatTitle)
@@ -50,6 +55,10 @@ class ChatFragment : Fragment() {
             tvChatTitle.text = makeTitle(initialMessage)
             addUserMessage(initialMessage)
             addBotMessage(makeDummyResponse(initialMessage))
+
+            scrollChatMessages.postDelayed({
+                showRecommendProductBottomSheet()
+            }, 500)
         }
 
         btnChatSend.setOnClickListener {
@@ -75,6 +84,10 @@ class ChatFragment : Fragment() {
         etChatMessage.text.clear()
 
         addBotMessage(makeDummyResponse(message))
+
+        scrollChatMessages.postDelayed({
+            showRecommendProductBottomSheet()
+        }, 500)
     }
 
     private fun addUserMessage(message: String) {
@@ -146,6 +159,60 @@ class ChatFragment : Fragment() {
         row.addView(bubble)
         layoutChatMessages.addView(row)
         scrollToBottom()
+    }
+
+    private fun showRecommendProductBottomSheet() {
+        val dialog = BottomSheetDialog(requireContext())
+
+        val bottomSheetView = layoutInflater.inflate(
+            R.layout.bottom_sheet_recommend_products,
+            null
+        )
+
+        val rvRecommendProducts =
+            bottomSheetView.findViewById<RecyclerView>(R.id.rvRecommendProducts)
+
+        val btnMoreProducts =
+            bottomSheetView.findViewById<TextView>(R.id.btnMoreProducts)
+
+        val adapter = RecommendProductAdapter { product ->
+            // 나중에 상품 상세 페이지 이동 연결
+            // 예: ProductDetailFragment.newInstance(product.id)
+            dialog.dismiss()
+        }
+
+        rvRecommendProducts.layoutManager = LinearLayoutManager(requireContext())
+        rvRecommendProducts.adapter = adapter
+        rvRecommendProducts.isNestedScrollingEnabled = false
+
+        adapter.submitList(getDummyRecommendProducts())
+
+        btnMoreProducts.setOnClickListener {
+            // 나중에 전체 검색 결과 화면으로 이동 연결
+            dialog.dismiss()
+        }
+
+        dialog.setContentView(bottomSheetView)
+        dialog.show()
+    }
+
+    private fun getDummyRecommendProducts(): List<RecommendProduct> {
+        return listOf(
+            RecommendProduct(
+                id = "dummy_1",
+                category = "빼빼로",
+                name = "해태 포키 블루베리",
+                imageResId = R.drawable.ic_launcher_foreground,
+                allergyTags = listOf("우유", "땅콩")
+            ),
+            RecommendProduct(
+                id = "dummy_2",
+                category = "빼빼로",
+                name = "빼빼로 녹차",
+                imageResId = R.drawable.ic_launcher_foreground,
+                allergyTags = listOf("우유", "땅콩")
+            )
+        )
     }
 
     private fun scrollToBottom() {

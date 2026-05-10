@@ -1,4 +1,9 @@
 package com.example.beforemerge.ui.model
 
-class RecommendProduct {
-}
+data class RecommendProduct(
+    val id: String,
+    val category: String,
+    val name: String,
+    val imageResId: Int,
+    val allergyTags: List<String>
+)
