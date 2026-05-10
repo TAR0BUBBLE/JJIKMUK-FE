@@ -18,9 +18,9 @@ class AuthActivity : AppCompatActivity() {
     }
 
     fun moveToLoginPassword() {
-//        supportFragmentManager.beginTransaction()
-//            .replace(R.id.authFragmentContainer, LoginPasswordFragment())
-//            .addToBackStack(null)
-//            .commit()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.authFragmentContainer, LoginPasswordFragment())
+            .addToBackStack(null)
+            .commit()
     }
 }

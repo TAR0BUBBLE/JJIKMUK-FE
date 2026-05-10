@@ -34,7 +34,7 @@
     <!-- 입력창 -->
     <dimen name="auth_input_height">56dp</dimen>
     <dimen name="auth_input_horizontal_padding">22dp</dimen>
-    <dimen name="auth_input_text_size">15sp</dimen>
+    <dimen name="auth_input_text_size">14sp</dimen>
     <dimen name="auth_corner_radius">8dp</dimen>
 
     <!-- 하단 버튼 -->
@@ -42,4 +42,14 @@
     <dimen name="auth_button_bottom_margin">86dp</dimen>
     <dimen name="auth_button_radius">17dp</dimen>
     <dimen name="auth_button_text_size">15sp</dimen>
+
+
+    <!-- 비밀번호 입력창 우측 아이콘 -->
+    <dimen name="auth_password_icon_touch_size">48dp</dimen>
+    <dimen name="auth_password_icon_size">22dp</dimen>
+    <dimen name="auth_password_icon_end_margin">5dp</dimen>
+
+    <!-- 비밀번호 찾기 텍스트 -->
+    <dimen name="auth_forgot_password_text_size">14sp</dimen>
+    <dimen name="auth_forgot_password_bottom_margin">20dp</dimen>
 </resources>

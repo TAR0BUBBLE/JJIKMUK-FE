@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AuthEditTextStyle">
+        <item name="android:layout_height">@dimen/auth_input_height</item>
+        <item name="android:background">@drawable/bg_auth_input</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:paddingHorizontal">@dimen/auth_input_horizontal_padding</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/auth_text_primary</item>
+        <item name="android:textColorHint">@color/auth_text_secondary</item>
+        <item name="android:textSize">@dimen/auth_input_text_size</item>
+    </style>
+
+    <style name="AuthPasswordInnerEditTextStyle">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/auth_text_primary</item>
+        <item name="android:textColorHint">@color/auth_text_secondary</item>
+        <item name="android:textSize">@dimen/auth_input_text_size</item>
+    </style>
+</resources>
