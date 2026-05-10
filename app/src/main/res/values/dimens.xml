@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 화면 좌우 공통 여백 -->
+    <dimen name="auth_screen_horizontal_padding">22dp</dimen>
+
+    <!-- 상단 뒤로가기 버튼 -->
+    <!-- 실제 터치 가능한 영역: Android 접근성 기준 최소 48dp -->
+    <dimen name="auth_back_button_touch_size">48dp</dimen>
+
+    <!-- 화면에 보이는 화살표 아이콘 크기 -->
+    <dimen name="auth_back_icon_size">22dp</dimen>
+
+    <!-- 뒤로가기 버튼의 상단 위치 -->
+    <dimen name="auth_back_button_top_margin">46dp</dimen>
+
+    <!-- 뒤로가기 버튼이 커지면서 아이콘 위치를 피그마 기준에 맞추기 위한 보정값 -->
+    <dimen name="auth_back_button_start_margin">-13dp</dimen>
+
+    <!-- 뒤로가기 버튼과 타이틀 사이 간격 -->
+    <dimen name="auth_title_top_margin">12dp</dimen>
+
+    <!-- 타이틀 텍스트 크기 -->
+    <dimen name="auth_title_text_size">24sp</dimen>
+
+    <!-- 타이틀과 안내 문구 사이 간격 -->
+    <dimen name="auth_description_top_margin">18dp</dimen>
+
+    <!-- 안내 문구 텍스트 크기 -->
+    <dimen name="auth_description_text_size">14sp</dimen>
+
+    <!-- 안내 문구와 입력창 사이 간격 -->
+    <dimen name="auth_input_top_margin">24dp</dimen>
+
+    <!-- 입력창 -->
+    <dimen name="auth_input_height">56dp</dimen>
+    <dimen name="auth_input_horizontal_padding">22dp</dimen>
+    <dimen name="auth_input_text_size">15sp</dimen>
+    <dimen name="auth_corner_radius">8dp</dimen>
+
+    <!-- 하단 버튼 -->
+    <dimen name="auth_button_height">56dp</dimen>
+    <dimen name="auth_button_bottom_margin">86dp</dimen>
+    <dimen name="auth_button_radius">17dp</dimen>
+    <dimen name="auth_button_text_size">15sp</dimen>
+</resources>

@@ -13,4 +13,12 @@
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="auth_text_primary">#1E232C</color>
+    <color name="auth_text_secondary">#8391A1</color>
+    <color name="auth_input_background">#F7F8F9</color>
+    <color name="auth_input_stroke">#E8ECF4</color>
+    <color name="auth_primary_yellow">#FFE87F</color>
+    <color name="auth_brand_green">#16A635</color>
+    <color name="auth_back_gray">#BDBDBD</color>
 </resources>

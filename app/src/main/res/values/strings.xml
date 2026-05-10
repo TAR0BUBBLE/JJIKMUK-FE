@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">BeforeMerge</string>
+    <string name="app_name">JJIKMUK</string>
+
+    <string name="auth_back">뒤로가기</string>
+    <string name="auth_login_title">간편하게 찍어 먹자!</string>
+    <string name="auth_login_email_description">로그인 또는 회원가입을 위해\n이메일 주소를 입력해 주세요</string>
+    <string name="auth_email_hint">email@example.com</string>
+    <string name="auth_confirm">확인</string>
 </resources>
