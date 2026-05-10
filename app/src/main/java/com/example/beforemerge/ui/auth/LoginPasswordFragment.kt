@@ -22,6 +22,12 @@ class LoginPasswordFragment : Fragment(R.layout.fragment_login_password) {
 
         setTitleStyle(view)
         initClickListeners(view)
+        setupKeyboardAwareBottomButton(view)
+    }
+
+    private fun setupKeyboardAwareBottomButton(view: View) {
+        val btnLogin = view.findViewById<TextView>(R.id.btnLogin)
+        view.applyKeyboardAwareBottomMargin(btnLogin)
     }
 
     private fun initClickListeners(view: View) {

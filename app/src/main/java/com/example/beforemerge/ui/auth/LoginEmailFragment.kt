@@ -18,6 +18,12 @@ class LoginEmailFragment : Fragment(R.layout.fragment_login_email) {
 
         setTitleStyle(view)
         initClickListeners(view)
+        setupKeyboardAwareBottomButton(view)
+    }
+
+    private fun setupKeyboardAwareBottomButton(view: View) {
+        val btnConfirm = view.findViewById<TextView>(R.id.btnConfirm)
+        view.applyKeyboardAwareBottomMargin(btnConfirm)
     }
 
     private fun initClickListeners(view: View) {
@@ -29,7 +35,6 @@ class LoginEmailFragment : Fragment(R.layout.fragment_login_email) {
         }
 
         btnConfirm.setOnClickListener {
-            // TODO: 추후 이메일 입력값 검증 및 API 연동 예정
             (requireActivity() as AuthActivity).moveToLoginPassword()
         }
     }
