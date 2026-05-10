@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">BeforeMerge</string>
+    <string name="app_name">JJIKMUK</string>
+
+    <!--로그인 이메일 입력 화면-->
+    <string name="auth_back">뒤로가기</string>
+    <string name="auth_login_title">간편하게 찍어 먹자!</string>
+    <string name="auth_login_email_description">로그인 또는 회원가입을 위해\n이메일 주소를 입력해 주세요</string>
+    <string name="auth_email_hint">email@example.com</string>
+    <string name="auth_confirm">확인</string>
+
+    <!--로그인 비밀번호 입력 화면-->
+    <string name="auth_login_password_description">다시 오신 걸 환영해요!\n비밀번호를 입력해 주세요</string>
+    <string name="auth_password_hint">비밀번호 입력</string>
+    <string name="auth_password_visibility_toggle">비밀번호 보기/숨기기</string>
+    <string name="auth_forgot_password">비밀번호를 잊으셨나요?</string>
+    <string name="auth_login">로그인</string>
 </resources>
