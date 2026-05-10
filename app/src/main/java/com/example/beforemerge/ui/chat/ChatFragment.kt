@@ -163,7 +163,7 @@ class ChatFragment : Fragment() {
     }
 
     private fun makeDummyResponse(userMessage: String): String {
-        return "You hit the nail on the head! $userMessage is made with smooth chocolate and crunchy cookies. They're reasonably priced, so give them a try. The basic flavor is chocolate, but they also come in strawberry and green tea flavor. You can easily find them at your local supermarket or convenience store."
+        return "'$userMessage'에 대해 확인해볼게요. 입력한 음식명이나 제품명을 기준으로 성분, 알레르기 가능성, 섭취 시 주의할 점을 안내할 수 있습니다. 실제 서비스에서는 이 부분에 챗봇 API 응답을 연결하면 됩니다."
     }
 
     private fun dp(value: Int): Int {

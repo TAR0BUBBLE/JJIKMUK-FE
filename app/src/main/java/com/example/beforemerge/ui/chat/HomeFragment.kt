@@ -69,6 +69,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
             if (message.isEmpty()) return@setOnClickListener
 
+            etHomeMessage.text.clear()
+            etHomeMessage.clearFocus()
+
             parentFragmentManager.beginTransaction()
                 .replace(R.id.mainContainer, ChatFragment.newInstance(message))
                 .addToBackStack(null)
