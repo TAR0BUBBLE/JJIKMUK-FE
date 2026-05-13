@@ -14,4 +14,20 @@
     <string name="auth_password_visibility_toggle">비밀번호 보기/숨기기</string>
     <string name="auth_forgot_password">비밀번호를 잊으셨나요?</string>
     <string name="auth_login">로그인</string>
+
+    <!-- 비밀번호 찾기 화면 -->
+    <string name="auth_forgot_password_title">비밀번호를 잊으셨나요?</string>
+    <string name="auth_forgot_password_description">인증을 위해 계정과 연결된\n이메일 주소를 입력해 주세요</string>
+    <string name="auth_send_code">코드 전송하기</string>
+
+    <!-- 인증번호 입력 화면 -->
+    <string name="auth_otp_title">인증번호 입력</string>
+    <string name="auth_otp_description">이메일로 보내드린\n인증번호 4자리를 입력해 주세요</string>
+    <string name="auth_verify">인증하기</string>
+
+    <!-- 새 비밀번호 생성 화면 -->
+    <string name="auth_new_password_title">새 비밀번호 생성</string>
+    <string name="auth_new_password_description">새로운 비밀번호를 입력해 주세요</string>
+    <string name="auth_new_password_hint">새 비밀번호</string>
+    <string name="auth_confirm_password_hint">비밀번호 확인</string>
 </resources>

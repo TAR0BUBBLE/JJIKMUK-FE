@@ -21,4 +21,9 @@
     <color name="auth_primary_yellow">#FFE87F</color>
     <color name="auth_brand_green">#16A635</color>
     <color name="auth_back_gray">#BDBDBD</color>
+
+<!--    OTP 인증화면-->
+    <color name="auth_otp_active_stroke">#68D1D0</color>
+    <color name="auth_otp_inactive_background">#F7F8F9</color>
+    <color name="auth_otp_inactive_stroke">#E8ECF4</color>
 </resources>

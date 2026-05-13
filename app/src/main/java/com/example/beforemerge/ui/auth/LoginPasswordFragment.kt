@@ -47,7 +47,7 @@ class LoginPasswordFragment : Fragment(R.layout.fragment_login_password) {
         }
 
         tvForgotPassword.setOnClickListener {
-            // TODO: 비밀번호 찾기 화면 구현 후 이동 처리
+            (requireActivity() as AuthActivity).moveToForgotPassword()
         }
 
         btnLogin.setOnClickListener {

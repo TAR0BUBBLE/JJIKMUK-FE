@@ -46,4 +46,14 @@
     <!-- 비밀번호 찾기 텍스트 -->
     <dimen name="auth_forgot_password_text_size">14sp</dimen>
     <dimen name="auth_forgot_password_bottom_margin">20dp</dimen>
+
+    <!-- 입력 필드가 여러 개일 때 간격 -->
+    <dimen name="auth_input_between_margin">15dp</dimen>
+
+    <!-- 인증번호 입력칸 -->
+    <dimen name="auth_otp_box_width">70dp</dimen>
+    <dimen name="auth_otp_box_height">60dp</dimen>
+    <dimen name="auth_otp_box_gap">17dp</dimen>
+    <dimen name="auth_otp_box_radius">8dp</dimen>
+    <dimen name="auth_otp_text_size">22sp</dimen>
 </resources>
