@@ -43,6 +43,8 @@ class OtpVerificationFragment : Fragment(R.layout.fragment_otp_verification) {
             view.findViewById<EditText>(R.id.etOtp4)
         )
 
+        updateOtpInputBackgrounds(otpInputs)
+
         otpInputs.forEachIndexed { index, editText ->
             editText.addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(
@@ -58,6 +60,8 @@ class OtpVerificationFragment : Fragment(R.layout.fragment_otp_verification) {
                     before: Int,
                     count: Int
                 ) {
+                    updateOtpInputBackgrounds(otpInputs)
+
                     if (!s.isNullOrEmpty() && index < otpInputs.lastIndex) {
                         otpInputs[index + 1].requestFocus()
                     }
@@ -75,11 +79,28 @@ class OtpVerificationFragment : Fragment(R.layout.fragment_otp_verification) {
                 ) {
                     otpInputs[index - 1].requestFocus()
                     otpInputs[index - 1].text?.clear()
+                    updateOtpInputBackgrounds(otpInputs)
                     true
                 } else {
                     false
                 }
             }
+        }
+    }
+
+    private fun updateOtpInputBackgrounds(otpInputs: List<EditText>) {
+        val isAllEmpty = otpInputs.all { it.text.isNullOrEmpty() }
+
+        otpInputs.forEachIndexed { index, editText ->
+            val shouldBeActive = editText.text.isNotEmpty() || (isAllEmpty && index == 0)
+
+            editText.setBackgroundResource(
+                if (shouldBeActive) {
+                    R.drawable.bg_auth_otp_active
+                } else {
+                    R.drawable.bg_auth_otp_inactive
+                }
+            )
         }
     }
 
