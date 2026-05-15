@@ -62,4 +62,18 @@ class AuthActivity : AppCompatActivity() {
             .replace(R.id.authFragmentContainer, LoginEmailFragment())
             .commit()
     }
+
+    fun moveToCreateNickname() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.authFragmentContainer, CreateNicknameFragment())
+            .addToBackStack(null)
+            .commit()
+    }
+
+    fun moveToCreatePassword() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.authFragmentContainer, CreatePasswordFragment())
+            .addToBackStack(null)
+            .commit()
+    }
 }

@@ -52,7 +52,15 @@ class LoginEmailFragment : Fragment(R.layout.fragment_login_email) {
             }
 
             hideEmailError(etEmail, tvEmailError)
-            (requireActivity() as AuthActivity).moveToLoginPassword()
+
+            // TODO: 추후 이메일 확인 API 연동 후 실제 계정 존재 여부로 교체
+            val isExistingAccountEmail = email == TEMP_EXISTING_EMAIL
+
+            if (isExistingAccountEmail) {
+                (requireActivity() as AuthActivity).moveToLoginPassword()
+            } else {
+                (requireActivity() as AuthActivity).moveToCreatePassword()
+            }
         }
     }
 
@@ -97,5 +105,9 @@ class LoginEmailFragment : Fragment(R.layout.fragment_login_email) {
         }
 
         tvTitle.text = spannable
+    }
+
+    companion object {
+        private const val TEMP_EXISTING_EMAIL = "email@example.com"
     }
 }
