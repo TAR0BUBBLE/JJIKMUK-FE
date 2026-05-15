@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- =========================
+         Auth 기본 입력창 스타일
+         사용 화면:
+         - fragment_login_email.xml
+         - fragment_forgot_password.xml
+         - fragment_new_password.xml
+
+         의미:
+         - 이메일 입력창
+         - 비밀번호 찾기 이메일 입력창
+         - 새 비밀번호/비밀번호 확인 입력창
+         ========================= -->
     <style name="AuthEditTextStyle">
         <item name="android:layout_height">@dimen/auth_input_height</item>
         <item name="android:background">@drawable/bg_auth_input</item>
@@ -11,6 +23,17 @@
         <item name="android:textSize">@dimen/auth_input_text_size</item>
     </style>
 
+
+    <!-- =========================
+         Auth 비밀번호 입력창 내부 스타일
+         사용 화면:
+         - fragment_login_password.xml
+
+         의미:
+         - 비밀번호 입력창은 우측 아이콘이 있어
+           바깥 Container가 입력창 배경/테두리를 담당함
+         - 내부 EditText는 투명 배경으로 처리
+         ========================= -->
     <style name="AuthPasswordInnerEditTextStyle">
         <item name="android:layout_height">0dp</item>
         <item name="android:background">@android:color/transparent</item>

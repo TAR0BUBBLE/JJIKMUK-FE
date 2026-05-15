@@ -1,59 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- =========================
+         Auth 화면 공통 레이아웃
+         사용 화면:
+         - fragment_login_email.xml
+         - fragment_login_password.xml
+         - fragment_forgot_password.xml
+         - fragment_otp_verification.xml
+         - fragment_new_password.xml
+         - fragment_password_change_complete.xml
+         ========================= -->
+
     <!-- 화면 좌우 공통 여백 -->
     <dimen name="auth_screen_horizontal_padding">22dp</dimen>
 
-    <!-- 상단 뒤로가기 버튼 -->
+
+    <!-- =========================
+         상단 뒤로가기 버튼
+         사용 화면:
+         - fragment_login_email.xml
+         - fragment_login_password.xml
+         - fragment_forgot_password.xml
+         - fragment_otp_verification.xml
+         - fragment_new_password.xml
+         ========================= -->
+
     <!-- 실제 터치 가능한 영역: Android 접근성 기준 최소 48dp -->
     <dimen name="auth_back_button_touch_size">48dp</dimen>
+
     <!-- 화면에 보이는 화살표 아이콘 크기 -->
     <dimen name="auth_back_icon_size">22dp</dimen>
+
     <!-- 뒤로가기 버튼의 상단 위치 -->
     <dimen name="auth_back_button_top_margin">46dp</dimen>
-    <!-- 뒤로가기 버튼이 커지면서 아이콘 위치를 피그마 기준에 맞추기 위한 보정값 -->
+
+    <!-- 터치 영역 확장으로 밀린 아이콘 위치를 피그마 기준에 맞추는 보정값 -->
     <dimen name="auth_back_button_start_margin">-13dp</dimen>
+
     <!-- 뒤로가기 버튼과 타이틀 사이 간격 -->
     <dimen name="auth_title_top_margin">12dp</dimen>
 
-    <!-- 타이틀 텍스트 크기 -->
+
+    <!-- =========================
+         Auth 제목/안내 문구
+         사용 화면:
+         - fragment_login_email.xml
+         - fragment_login_password.xml
+         - fragment_forgot_password.xml
+         - fragment_otp_verification.xml
+         - fragment_new_password.xml
+         ========================= -->
+
+    <!-- 화면 제목 텍스트 크기 -->
     <dimen name="auth_title_text_size">24sp</dimen>
-    <!-- 타이틀과 안내 문구 사이 간격 -->
+
+    <!-- 제목과 안내 문구 사이 간격 -->
     <dimen name="auth_description_top_margin">18dp</dimen>
+
     <!-- 안내 문구 텍스트 크기 -->
     <dimen name="auth_description_text_size">14sp</dimen>
-    <!-- 안내 문구와 입력창 사이 간격 -->
+
+    <!-- 안내 문구와 첫 번째 입력창 사이 간격 -->
     <dimen name="auth_input_top_margin">24dp</dimen>
 
-    <!-- 입력창 -->
+
+    <!-- =========================
+         Auth 기본 입력창
+         사용 화면:
+         - fragment_login_email.xml
+         - fragment_forgot_password.xml
+         - fragment_new_password.xml
+         사용 스타일:
+         - AuthEditTextStyle
+         ========================= -->
+
+    <!-- 입력창 높이 -->
     <dimen name="auth_input_height">56dp</dimen>
+
+    <!-- 입력창 내부 좌우 패딩 -->
     <dimen name="auth_input_horizontal_padding">22dp</dimen>
+
+    <!-- 입력창 텍스트/placeholder 크기 -->
     <dimen name="auth_input_text_size">14sp</dimen>
+
+    <!-- 입력창 모서리 둥글기 -->
     <dimen name="auth_corner_radius">8dp</dimen>
 
-    <!-- 하단 버튼 -->
-    <dimen name="auth_button_height">56dp</dimen>
-    <dimen name="auth_button_bottom_margin">86dp</dimen>
-    <!-- 키보드 노출 시 하단 버튼과 키보드 사이 간격 -->
-    <dimen name="auth_button_keyboard_bottom_margin">23dp</dimen>
-    <dimen name="auth_button_radius">17dp</dimen>
-    <dimen name="auth_button_text_size">15sp</dimen>
-
-    <!-- 비밀번호 입력창 우측 아이콘 -->
-    <dimen name="auth_password_icon_touch_size">48dp</dimen>
-    <dimen name="auth_password_icon_size">22dp</dimen>
-    <dimen name="auth_password_icon_end_margin">5dp</dimen>
-
-    <!-- 비밀번호 찾기 텍스트 -->
-    <dimen name="auth_forgot_password_text_size">14sp</dimen>
-    <dimen name="auth_forgot_password_bottom_margin">20dp</dimen>
-
-    <!-- 입력 필드가 여러 개일 때 간격 -->
+    <!-- 입력 필드가 여러 개일 때 필드 사이 간격 -->
     <dimen name="auth_input_between_margin">15dp</dimen>
 
-    <!-- 인증번호 입력칸 -->
+
+    <!-- =========================
+         Auth 하단 주요 버튼
+         사용 화면:
+         - fragment_login_email.xml
+         - fragment_login_password.xml
+         - fragment_forgot_password.xml
+         - fragment_otp_verification.xml
+         - fragment_new_password.xml
+         - fragment_password_change_complete.xml
+         ========================= -->
+
+    <!-- 하단 버튼 높이 -->
+    <dimen name="auth_button_height">56dp</dimen>
+
+    <!-- 키보드가 없을 때 버튼과 화면 하단 사이 간격 -->
+    <dimen name="auth_button_bottom_margin">86dp</dimen>
+
+    <!-- 키보드 노출 시 버튼과 키보드 사이 간격 -->
+    <dimen name="auth_button_keyboard_bottom_margin">23dp</dimen>
+
+    <!-- 하단 버튼 모서리 둥글기 -->
+    <dimen name="auth_button_radius">17dp</dimen>
+
+    <!-- 하단 버튼 텍스트 크기 -->
+    <dimen name="auth_button_text_size">15sp</dimen>
+
+
+    <!-- =========================
+         로그인 비밀번호 입력 화면
+         사용 화면:
+         - fragment_login_password.xml
+         ========================= -->
+
+    <!-- 비밀번호 보기/숨기기 아이콘 터치 영역 -->
+    <dimen name="auth_password_icon_touch_size">48dp</dimen>
+
+    <!-- 비밀번호 보기/숨기기 아이콘 실제 크기 -->
+    <dimen name="auth_password_icon_size">22dp</dimen>
+
+    <!-- 비밀번호 아이콘과 입력창 오른쪽 사이 간격 -->
+    <dimen name="auth_password_icon_end_margin">5dp</dimen>
+
+    <!-- '비밀번호를 잊으셨나요?' 텍스트 크기 -->
+    <dimen name="auth_forgot_password_text_size">14sp</dimen>
+
+    <!-- '비밀번호를 잊으셨나요?'와 로그인 버튼 사이 간격 -->
+    <dimen name="auth_forgot_password_bottom_margin">20dp</dimen>
+
+
+    <!-- =========================
+         인증번호 입력 화면
+         사용 화면:
+         - fragment_otp_verification.xml
+         ========================= -->
+
+    <!-- OTP 입력칸 너비 -->
     <dimen name="auth_otp_box_width">70dp</dimen>
+
+    <!-- OTP 입력칸 높이 -->
     <dimen name="auth_otp_box_height">60dp</dimen>
+
+    <!-- OTP 입력칸 사이 간격 -->
     <dimen name="auth_otp_box_gap">17dp</dimen>
+
+    <!-- OTP 입력칸 모서리 둥글기 -->
     <dimen name="auth_otp_box_radius">8dp</dimen>
+
+    <!-- OTP 숫자 텍스트 크기 -->
     <dimen name="auth_otp_text_size">22sp</dimen>
+
+
+    <!-- =========================
+         비밀번호 변경 완료 화면
+         사용 화면:
+         - fragment_password_change_complete.xml
+         ========================= -->
+
+    <!-- 완료 아이콘 크기 -->
+    <dimen name="auth_success_icon_size">100dp</dimen>
+
+    <!-- 완료 아이콘 상단 위치 -->
+    <dimen name="auth_success_icon_top_margin">248dp</dimen>
+
+    <!-- 완료 아이콘과 제목 사이 간격 -->
+    <dimen name="auth_success_title_top_margin">35dp</dimen>
+
+    <!-- 제목과 설명 문구 사이 간격 -->
+    <dimen name="auth_success_description_top_margin">10dp</dimen>
+
+    <!-- 완료 화면 제목 텍스트 크기 -->
+    <dimen name="auth_success_title_text_size">24sp</dimen>
+
+    <!-- 완료 화면 설명 텍스트 크기 -->
+    <dimen name="auth_success_description_text_size">14sp</dimen>
 </resources>

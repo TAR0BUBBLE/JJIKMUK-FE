@@ -25,7 +25,8 @@ class NewPasswordFragment : Fragment(R.layout.fragment_new_password) {
         }
 
         btnConfirm.setOnClickListener {
-            // TODO: 비밀번호 변경 완료 화면 구현 후 이동 처리
+            // TODO: 추후 비밀번호 변경 API 연동 예정
+            (requireActivity() as AuthActivity).moveToPasswordChangeComplete()
         }
     }
 

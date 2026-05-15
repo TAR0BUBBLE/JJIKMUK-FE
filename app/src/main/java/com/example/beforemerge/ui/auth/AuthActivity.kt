@@ -44,4 +44,22 @@ class AuthActivity : AppCompatActivity() {
             .addToBackStack(null)
             .commit()
     }
+
+    fun moveToPasswordChangeComplete() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.authFragmentContainer, PasswordChangeCompleteFragment())
+            .addToBackStack(null)
+            .commit()
+    }
+
+    fun moveToLoginEmail() {
+        supportFragmentManager.popBackStack(
+            null,
+            androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE
+        )
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.authFragmentContainer, LoginEmailFragment())
+            .commit()
+    }
 }
