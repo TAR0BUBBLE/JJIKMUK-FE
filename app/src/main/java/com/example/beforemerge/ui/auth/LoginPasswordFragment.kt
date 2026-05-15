@@ -33,6 +33,8 @@ class LoginPasswordFragment : Fragment(R.layout.fragment_login_password) {
     private fun initClickListeners(view: View) {
         val btnBack = view.findViewById<ImageButton>(R.id.btnBack)
         val etPassword = view.findViewById<EditText>(R.id.etPassword)
+        val passwordInputContainer = view.findViewById<View>(R.id.passwordInputContainer)
+        val tvPasswordError = view.findViewById<TextView>(R.id.tvPasswordError)
         val btnTogglePasswordVisibility =
             view.findViewById<ImageButton>(R.id.btnTogglePasswordVisibility)
         val tvForgotPassword = view.findViewById<TextView>(R.id.tvForgotPassword)
@@ -40,6 +42,12 @@ class LoginPasswordFragment : Fragment(R.layout.fragment_login_password) {
 
         btnBack.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
+
+        etPassword.setOnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                hidePasswordError(passwordInputContainer, tvPasswordError)
+            }
         }
 
         btnTogglePasswordVisibility.setOnClickListener {
@@ -51,8 +59,25 @@ class LoginPasswordFragment : Fragment(R.layout.fragment_login_password) {
         }
 
         btnLogin.setOnClickListener {
-            // TODO: 추후 로그인 API 연동 예정
+            // TODO: 추후 로그인 API 연동 후 실제 비밀번호 검증 결과로 교체
+            showPasswordError(passwordInputContainer, tvPasswordError)
         }
+    }
+
+    private fun showPasswordError(
+        passwordInputContainer: View,
+        tvPasswordError: TextView
+    ) {
+        passwordInputContainer.setBackgroundResource(R.drawable.bg_auth_input_error)
+        tvPasswordError.visibility = View.VISIBLE
+    }
+
+    private fun hidePasswordError(
+        passwordInputContainer: View,
+        tvPasswordError: TextView
+    ) {
+        passwordInputContainer.setBackgroundResource(R.drawable.bg_auth_input)
+        tvPasswordError.visibility = View.GONE
     }
 
     private fun togglePasswordVisibility(

@@ -184,4 +184,15 @@
 
     <!-- 완료 화면 설명 텍스트 크기 -->
     <dimen name="auth_success_description_text_size">14sp</dimen>
+
+
+    <!-- Auth 오류 문구
+     사용 화면:
+     - fragment_login_email.xml
+     - fragment_login_password.xml
+     - fragment_forgot_password.xml
+     - fragment_new_password.xml
+-->
+    <dimen name="auth_error_text_top_margin">7dp</dimen>
+    <dimen name="auth_error_text_size">14sp</dimen>
 </resources>

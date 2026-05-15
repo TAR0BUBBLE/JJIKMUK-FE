@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.beforemerge.R
+import android.widget.EditText
 
 class LoginEmailFragment : Fragment(R.layout.fragment_login_email) {
 
@@ -28,15 +29,47 @@ class LoginEmailFragment : Fragment(R.layout.fragment_login_email) {
 
     private fun initClickListeners(view: View) {
         val btnBack = view.findViewById<ImageButton>(R.id.btnBack)
+        val etEmail = view.findViewById<EditText>(R.id.etEmail)
+        val tvEmailError = view.findViewById<TextView>(R.id.tvEmailError)
         val btnConfirm = view.findViewById<TextView>(R.id.btnConfirm)
 
         btnBack.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
 
+        etEmail.setOnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                hideEmailError(etEmail, tvEmailError)
+            }
+        }
+
         btnConfirm.setOnClickListener {
+            val email = etEmail.text.toString().trim()
+
+            if (!email.isValidEmailFormat()) {
+                showEmailError(etEmail, tvEmailError)
+                return@setOnClickListener
+            }
+
+            hideEmailError(etEmail, tvEmailError)
             (requireActivity() as AuthActivity).moveToLoginPassword()
         }
+    }
+
+    private fun showEmailError(
+        etEmail: EditText,
+        tvEmailError: TextView
+    ) {
+        etEmail.setBackgroundResource(R.drawable.bg_auth_input_error)
+        tvEmailError.visibility = View.VISIBLE
+    }
+
+    private fun hideEmailError(
+        etEmail: EditText,
+        tvEmailError: TextView
+    ) {
+        etEmail.setBackgroundResource(R.drawable.bg_auth_input)
+        tvEmailError.visibility = View.GONE
     }
 
     private fun setTitleStyle(view: View) {

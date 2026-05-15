@@ -83,4 +83,13 @@
 
     <!-- 미입력 OTP 칸 테두리 색상 -->
     <color name="auth_otp_inactive_stroke">#E8ECF4</color>
+
+    <!-- Auth 오류 상태 색상
+     사용 화면:
+     - fragment_login_email.xml
+     - fragment_login_password.xml
+     - fragment_forgot_password.xml
+     - fragment_new_password.xml
+-->
+    <color name="auth_error_red">#CA4242</color>
 </resources>
