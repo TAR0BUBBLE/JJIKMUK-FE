@@ -192,7 +192,60 @@
      - fragment_login_password.xml
      - fragment_forgot_password.xml
      - fragment_new_password.xml
--->
+    -->
     <dimen name="auth_error_text_top_margin">7dp</dimen>
     <dimen name="auth_error_text_size">14sp</dimen>
+
+
+    <!-- =========================
+     알러지 선택 화면
+     사용 화면:
+     - fragment_allergy_selection.xml
+     - item_allergy.xml
+     ========================= -->
+
+    <!-- 알러지 목록과 설명 문구 사이 간격 -->
+    <dimen name="auth_allergy_list_top_margin">38dp</dimen>
+
+    <!-- RecyclerView 아이템 전체 높이: 카드 그림자 여백 포함 -->
+    <dimen name="auth_allergy_item_height">120dp</dimen>
+
+    <!-- 실제 카드 주변 그림자 여백 -->
+    <dimen name="auth_allergy_card_shadow_padding">5dp</dimen>
+
+    <!-- 실제 카드 모서리 둥글기 -->
+    <dimen name="auth_allergy_card_radius">20dp</dimen>
+
+    <!-- 카드 그림자 높이 -->
+    <dimen name="auth_allergy_card_elevation">0dp</dimen>
+
+    <!-- 선택된 카드 그림자 높이 -->
+    <dimen name="auth_allergy_card_selected_elevation">0dp</dimen>
+
+    <!-- 알러지 카드 내부 아이콘 원 크기 -->
+    <dimen name="auth_allergy_icon_circle_size">44dp</dimen>
+
+    <!-- 알러지 아이콘 원 그림자 높이 -->
+    <dimen name="auth_allergy_icon_circle_elevation">0dp</dimen>
+
+    <!-- 선택된 알러지 아이콘 원 그림자 높이 -->
+    <dimen name="auth_allergy_icon_circle_selected_elevation">0.5dp</dimen>
+
+    <!-- 알러지 이미지 크기 -->
+    <dimen name="auth_allergy_icon_size">30dp</dimen>
+
+    <!-- 알러지 이름 텍스트 크기 -->
+    <dimen name="auth_allergy_name_text_size">13sp</dimen>
+
+    <!-- 알러지 카드 내부 아이콘과 이름 사이 간격 -->
+    <dimen name="auth_allergy_name_top_margin">12dp</dimen>
+
+    <!-- 알러지 카드 간격 -->
+    <dimen name="auth_allergy_grid_spacing">10dp</dimen>
+
+    <!-- 선택 체크 배지 크기 -->
+    <dimen name="auth_allergy_check_badge_size">26dp</dimen>
+
+    <!-- 알러지 목록과 하단 버튼 사이 안전 간격 -->
+    <dimen name="auth_allergy_list_bottom_margin">24dp</dimen>
 </resources>

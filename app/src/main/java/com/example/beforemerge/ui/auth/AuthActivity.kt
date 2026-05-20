@@ -76,4 +76,11 @@ class AuthActivity : AppCompatActivity() {
             .addToBackStack(null)
             .commit()
     }
+
+    fun moveToAllergySelection() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.authFragmentContainer, AllergySelectionFragment())
+            .addToBackStack(null)
+            .commit()
+    }
 }

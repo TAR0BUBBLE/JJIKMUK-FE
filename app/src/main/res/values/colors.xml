@@ -84,12 +84,38 @@
     <!-- 미입력 OTP 칸 테두리 색상 -->
     <color name="auth_otp_inactive_stroke">#E8ECF4</color>
 
+
     <!-- Auth 오류 상태 색상
      사용 화면:
      - fragment_login_email.xml
      - fragment_login_password.xml
      - fragment_forgot_password.xml
-     - fragment_new_password.xml
--->
+     - fragment_new_password.xml-->
     <color name="auth_error_red">#CA4242</color>
+
+
+    <!-- =========================
+     알러지 선택 화면
+     사용 화면:
+     - fragment_allergy_selection.xml
+     - item_allergy.xml
+     ========================= -->
+
+    <!-- 알러지 카드 기본 배경색 -->
+    <color name="auth_allergy_card_background">#FFFFFF</color>
+
+    <!-- 알러지 카드 기본 테두리 색상 -->
+    <color name="auth_allergy_card_stroke">#EEF0F4</color>
+
+    <!-- 알러지 카드 선택 배경색 -->
+    <color name="auth_allergy_card_selected_background">#F7FAFF</color>
+
+    <!-- 알러지 카드 선택 테두리/텍스트 색상 -->
+    <color name="auth_allergy_selected_blue">#2B7FFF</color>
+
+    <!-- 알러지 아이콘 원 기본 배경색 -->
+    <color name="auth_allergy_icon_background">#F9FAFB</color>
+
+    <!-- 선택된 알러지 아이콘 원 배경색 -->
+    <color name="auth_allergy_icon_selected_background">#FFFFFF</color>
 </resources>
