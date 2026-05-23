@@ -91,7 +91,7 @@
      - fragment_login_password.xml
      - fragment_forgot_password.xml
      - fragment_new_password.xml-->
-    <color name="auth_error_red">#CA4242</color>
+    <color name="auth_error_red">#F04438</color>
 
 
     <!-- =========================
