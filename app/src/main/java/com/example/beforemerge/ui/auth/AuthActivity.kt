@@ -83,4 +83,29 @@ class AuthActivity : AppCompatActivity() {
             .addToBackStack(null)
             .commit()
     }
+
+    var tempNickname: String = "코워커"
+
+    fun moveToProfileSetting(
+        nickname: String,
+        selectedAllergyIds: ArrayList<String>
+    ) {
+        supportFragmentManager.beginTransaction()
+            .replace(
+                R.id.authFragmentContainer,
+                ProfileSettingFragment.newInstance(
+                    nickname = nickname,
+                    selectedAllergyIds = selectedAllergyIds
+                )
+            )
+            .addToBackStack(null)
+            .commit()
+    }
+
+    fun moveToSignupComplete() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.authFragmentContainer, SignupCompleteFragment())
+            .addToBackStack(null)
+            .commit()
+    }
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chipRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/auth_profile_allergy_chip_height"
+    android:background="@drawable/bg_profile_allergy_chip"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/auth_profile_allergy_chip_padding_horizontal">
+
+    <ImageView
+        android:id="@+id/ivAllergy"
+        android:layout_width="@dimen/auth_profile_allergy_chip_icon_size"
+        android:layout_height="@dimen/auth_profile_allergy_chip_icon_size"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/tvAllergyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/auth_profile_allergy_chip_icon_text_gap"
+        android:includeFontPadding="false"
+        android:textColor="@color/auth_text_primary"
+        android:textSize="@dimen/auth_profile_allergy_chip_text_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

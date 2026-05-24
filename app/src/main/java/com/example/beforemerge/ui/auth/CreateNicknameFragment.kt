@@ -45,6 +45,7 @@ class CreateNicknameFragment : Fragment(R.layout.fragment_create_nickname) {
             }
 
             hideNicknameError(etNickname, tvNicknameError)
+            (requireActivity() as AuthActivity).tempNickname = nickname
             (requireActivity() as AuthActivity).moveToAllergySelection()
 
             // TODO: 추후 회원가입 API 연동 후 메인 화면 또는 온보딩 화면으로 이동

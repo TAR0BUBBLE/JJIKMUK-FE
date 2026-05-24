@@ -18,7 +18,7 @@ class AllergySelectionFragment : Fragment(R.layout.fragment_allergy_selection) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        allergyItems = createAllergyItems()
+        allergyItems = AllergyDataProvider.getAllergyItems()
 
         initRecyclerView(view)
         initClickListeners(view)
@@ -54,7 +54,16 @@ class AllergySelectionFragment : Fragment(R.layout.fragment_allergy_selection) {
 
         btnComplete.setOnClickListener {
             // TODO: 추후 회원가입 API 또는 프로필 저장 API 연동
-            // 선택된 알러지 목록은 getSelectedAllergies()로 가져올 수 있음
+            val selectedIds = getSelectedAllergies()
+                .map { it.id }
+                .let { ArrayList(it) }
+
+            val nickname = (requireActivity() as AuthActivity).tempNickname
+
+            (requireActivity() as AuthActivity).moveToProfileSetting(
+                nickname = nickname,
+                selectedAllergyIds = selectedIds
+            )
         }
     }
 

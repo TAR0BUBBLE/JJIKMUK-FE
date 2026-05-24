@@ -248,4 +248,56 @@
 
     <!-- 알러지 목록과 하단 버튼 사이 안전 간격 -->
     <dimen name="auth_allergy_list_bottom_margin">24dp</dimen>
+
+
+
+    <!-- =========================
+     프로필 설정 화면
+     사용 화면:
+     - fragment_profile_setting.xml
+     - item_selected_allergy_chip.xml
+     ========================= -->
+
+    <!-- 프로필 이미지 영역 -->
+    <dimen name="auth_profile_image_top_margin">40dp</dimen>
+    <dimen name="auth_profile_image_size">100dp</dimen>
+    <dimen name="auth_profile_image_elevation">3dp</dimen>
+
+    <!-- 프로필 기본 사람 아이콘 크기 -->
+    <dimen name="auth_profile_placeholder_icon_size">40dp</dimen>
+
+    <!-- 카메라 배지 -->
+    <dimen name="auth_profile_camera_badge_size">32dp</dimen>
+    <dimen name="auth_profile_camera_icon_size">16dp</dimen>
+    <dimen name="auth_profile_camera_badge_margin_end">2dp</dimen>
+    <dimen name="auth_profile_camera_badge_margin_bottom">2dp</dimen>
+
+    <!-- 프로필 정보 라벨 -->
+    <dimen name="auth_profile_label_top_margin">36dp</dimen>
+    <dimen name="auth_profile_second_label_top_margin">26.5dp</dimen>
+    <dimen name="auth_profile_label_text_size">13sp</dimen>
+
+    <!-- 닉네임 입력창 -->
+    <dimen name="auth_profile_input_top_margin">7dp</dimen>
+
+    <!-- 닉네임 입력창 clear 버튼 -->
+    <dimen name="auth_input_clear_button_size">20dp</dimen>
+    <dimen name="auth_input_clear_icon_size">12dp</dimen>
+    <dimen name="auth_input_clear_end_margin">14dp</dimen>
+
+    <!-- 선택 알러지 박스 -->
+    <dimen name="auth_profile_allergy_box_top_margin">17dp</dimen>
+    <dimen name="auth_profile_allergy_box_min_height">73dp</dimen>
+    <dimen name="auth_profile_allergy_box_radius">12dp</dimen>
+    <dimen name="auth_profile_allergy_box_padding_horizontal">17dp</dimen>
+    <dimen name="auth_profile_allergy_box_padding_vertical">17dp</dimen>
+
+    <!-- 선택 알러지 chip -->
+    <dimen name="auth_profile_allergy_chip_height">39dp</dimen>
+    <dimen name="auth_profile_allergy_chip_radius">12dp</dimen>
+    <dimen name="auth_profile_allergy_chip_padding_horizontal">14dp</dimen>
+    <dimen name="auth_profile_allergy_chip_gap">10dp</dimen>
+    <dimen name="auth_profile_allergy_chip_icon_size">18dp</dimen>
+    <dimen name="auth_profile_allergy_chip_text_size">14sp</dimen>
+    <dimen name="auth_profile_allergy_chip_icon_text_gap">6dp</dimen>
 </resources>

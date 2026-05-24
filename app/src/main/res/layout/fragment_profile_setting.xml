@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingHorizontal="@dimen/auth_screen_horizontal_padding">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="@dimen/auth_back_button_touch_size"
+        android:layout_height="@dimen/auth_back_button_touch_size"
+        android:layout_marginStart="@dimen/auth_back_button_start_margin"
+        android:layout_marginTop="@dimen/auth_back_button_top_margin"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/auth_back"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:padding="0dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/auth_title_top_margin"
+        android:includeFontPadding="false"
+        android:text="@string/auth_profile_setting_title"
+        android:textColor="@color/auth_text_primary"
+        android:textSize="@dimen/auth_title_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/auth_description_top_margin"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="2dp"
+        android:text="@string/auth_profile_setting_description"
+        android:textColor="@color/auth_text_secondary"
+        android:textSize="@dimen/auth_description_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <FrameLayout
+        android:id="@+id/profileImageContainer"
+        android:layout_width="@dimen/auth_profile_image_size"
+        android:layout_height="@dimen/auth_profile_image_size"
+        android:layout_marginTop="@dimen/auth_profile_image_top_margin"
+        android:background="@drawable/bg_profile_image_circle"
+        android:elevation="@dimen/auth_profile_image_elevation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription">
+
+        <ImageView
+            android:id="@+id/ivProfilePlaceholder"
+            android:layout_width="@dimen/auth_profile_placeholder_icon_size"
+            android:layout_height="@dimen/auth_profile_placeholder_icon_size"
+            android:layout_gravity="center"
+            android:contentDescription="@string/auth_profile_image"
+            android:src="@drawable/ic_profile_placeholder" />
+
+        <FrameLayout
+            android:id="@+id/btnCamera"
+            android:layout_width="@dimen/auth_profile_camera_badge_size"
+            android:layout_height="@dimen/auth_profile_camera_badge_size"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/auth_profile_camera_badge_margin_end"
+            android:layout_marginBottom="@dimen/auth_profile_camera_badge_margin_bottom"
+            android:background="@drawable/bg_profile_camera_badge"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/auth_profile_camera_icon_size"
+                android:layout_height="@dimen/auth_profile_camera_icon_size"
+                android:layout_gravity="center"
+                android:contentDescription="@string/auth_profile_camera"
+                android:src="@drawable/ic_camera_badge" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/auth_profile_label_top_margin"
+        android:includeFontPadding="false"
+        android:text="@string/auth_profile_name_label"
+        android:textColor="@color/auth_text_primary"
+        android:textSize="@dimen/auth_profile_label_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileImageContainer" />
+
+    <FrameLayout
+        android:id="@+id/nameInputContainer"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/auth_input_height"
+        android:layout_marginTop="@dimen/auth_profile_input_top_margin"
+        android:background="@drawable/bg_auth_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNameLabel">
+
+        <EditText
+            android:id="@+id/etNickname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="username"
+            android:background="@android:color/transparent"
+            android:hint="@string/auth_nickname_hint"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:paddingStart="@dimen/auth_input_horizontal_padding"
+            android:paddingEnd="52dp"
+            android:singleLine="true"
+            android:textColor="@color/auth_text_primary"
+            android:textColorHint="@color/auth_text_secondary"
+            android:textSize="@dimen/auth_input_text_size" />
+
+        <FrameLayout
+            android:id="@+id/btnClearNickname"
+            android:layout_width="@dimen/auth_input_clear_button_size"
+            android:layout_height="@dimen/auth_input_clear_button_size"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/auth_input_clear_end_margin"
+            android:background="@drawable/bg_input_clear_button"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="@dimen/auth_input_clear_icon_size"
+                android:layout_height="@dimen/auth_input_clear_icon_size"
+                android:layout_gravity="center"
+                android:contentDescription="@string/auth_input_clear"
+                android:src="@drawable/ic_input_clear" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvAllergyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/auth_profile_second_label_top_margin"
+        android:includeFontPadding="false"
+        android:text="@string/auth_profile_allergy_label"
+        android:textColor="@color/auth_text_primary"
+        android:textSize="@dimen/auth_profile_label_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameInputContainer" />
+
+    <TextView
+        android:id="@+id/tvEditAllergy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:includeFontPadding="false"
+        android:text="@string/auth_profile_allergy_edit"
+        android:textColor="@color/auth_text_secondary"
+        android:textSize="@dimen/auth_profile_label_text_size"
+        app:drawableStartCompat="@drawable/ic_edit_pencil"
+        app:layout_constraintBottom_toBottomOf="@id/tvAllergyLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvAllergyLabel" />
+
+    <HorizontalScrollView
+        android:id="@+id/allergyBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/auth_profile_allergy_box_top_margin"
+        android:background="@drawable/bg_profile_allergy_box"
+        android:fillViewport="true"
+        android:minHeight="@dimen/auth_profile_allergy_box_min_height"
+        android:overScrollMode="never"
+        android:paddingHorizontal="@dimen/auth_profile_allergy_box_padding_horizontal"
+        android:paddingVertical="@dimen/auth_profile_allergy_box_padding_vertical"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAllergyLabel">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/selectedAllergyContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/tvNoAllergy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="@string/auth_profile_no_allergy"
+                android:textColor="@color/auth_text_secondary"
+                android:textSize="@dimen/auth_input_text_size"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/btnStart"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/auth_button_height"
+        android:layout_marginBottom="@dimen/auth_button_bottom_margin"
+        android:background="@drawable/bg_auth_primary_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/auth_start"
+        android:textColor="@color/auth_text_primary"
+        android:textSize="@dimen/auth_button_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -118,4 +118,32 @@
 
     <!-- 선택된 알러지 아이콘 원 배경색 -->
     <color name="auth_allergy_icon_selected_background">#FFFFFF</color>
+
+
+    <!-- =========================
+     프로필 설정 화면
+     사용 화면:
+     - fragment_profile_setting.xml
+     ========================= -->
+
+    <!-- 프로필 이미지 원형 배경 -->
+    <color name="auth_profile_image_background">#EFF6FF</color>
+
+    <!-- 프로필 기본 사람 아이콘 색상 -->
+    <color name="auth_profile_icon_blue">#8EC5FF</color>
+
+    <!-- 프로필 사진 카메라 배지 배경 -->
+    <color name="auth_profile_camera_background">#101828</color>
+
+    <!-- 닉네임 입력창 clear 버튼 배경 -->
+    <color name="auth_input_clear_background">#D1D5DC</color>
+
+    <!-- 선택 알러지 박스 배경 -->
+    <color name="auth_profile_allergy_box_background">#FFFFFF</color>
+
+    <!-- 선택 알러지 chip 배경 -->
+    <color name="auth_profile_allergy_chip_background">#FFFFFF</color>
+
+    <!-- 선택 알러지 chip 테두리 -->
+    <color name="auth_profile_allergy_chip_stroke">#E5E7EB</color>
 </resources>
