@@ -98,7 +98,7 @@ class ProfileSettingFragment : Fragment(R.layout.fragment_profile_setting) {
 
     private fun initClickListeners(view: View) {
         val btnBack = view.findViewById<ImageButton>(R.id.btnBack)
-        val btnCamera = view.findViewById<FrameLayout>(R.id.btnCamera)
+        val btnCamera = view.findViewById<View>(R.id.btnCamera)
         val etNickname = view.findViewById<EditText>(R.id.etNickname)
         val btnClearNickname = view.findViewById<FrameLayout>(R.id.btnClearNickname)
         val tvEditAllergy = view.findViewById<TextView>(R.id.tvEditAllergy)
@@ -121,11 +121,9 @@ class ProfileSettingFragment : Fragment(R.layout.fragment_profile_setting) {
         }
 
         btnStart.setOnClickListener {
-            // TODO: 추후 회원가입/프로필 저장 API 연동
             (requireActivity() as AuthActivity).moveToSignupComplete()
         }
     }
-
     private fun setupKeyboardAwareBottomButton(view: View) {
         val btnStart = view.findViewById<TextView>(R.id.btnStart)
         view.applyKeyboardAwareBottomMargin(btnStart)

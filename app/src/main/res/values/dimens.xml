@@ -260,17 +260,8 @@
 
     <!-- 프로필 이미지 영역 -->
     <dimen name="auth_profile_image_top_margin">40dp</dimen>
-    <dimen name="auth_profile_image_size">100dp</dimen>
-    <dimen name="auth_profile_image_elevation">3dp</dimen>
-
-    <!-- 프로필 기본 사람 아이콘 크기 -->
-    <dimen name="auth_profile_placeholder_icon_size">40dp</dimen>
-
-    <!-- 카메라 배지 -->
-    <dimen name="auth_profile_camera_badge_size">32dp</dimen>
-    <dimen name="auth_profile_camera_icon_size">16dp</dimen>
-    <dimen name="auth_profile_camera_badge_margin_end">2dp</dimen>
-    <dimen name="auth_profile_camera_badge_margin_bottom">2dp</dimen>
+    <dimen name="auth_profile_container_size">96dp</dimen>
+    <dimen name="auth_profile_camera_button_size">32dp</dimen>
 
     <!-- 프로필 정보 라벨 -->
     <dimen name="auth_profile_label_top_margin">36dp</dimen>

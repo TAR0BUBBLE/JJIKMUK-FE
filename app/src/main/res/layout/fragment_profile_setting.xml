@@ -51,42 +51,35 @@
 
     <FrameLayout
         android:id="@+id/profileImageContainer"
-        android:layout_width="@dimen/auth_profile_image_size"
-        android:layout_height="@dimen/auth_profile_image_size"
+        android:layout_width="@dimen/auth_profile_container_size"
+        android:layout_height="@dimen/auth_profile_container_size"
         android:layout_marginTop="@dimen/auth_profile_image_top_margin"
-        android:background="@drawable/bg_profile_image_circle"
-        android:elevation="@dimen/auth_profile_image_elevation"
+        android:clipChildren="false"
+        android:clipToPadding="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvDescription">
 
         <ImageView
-            android:id="@+id/ivProfilePlaceholder"
-            android:layout_width="@dimen/auth_profile_placeholder_icon_size"
-            android:layout_height="@dimen/auth_profile_placeholder_icon_size"
-            android:layout_gravity="center"
+            android:id="@+id/ivProfileContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:contentDescription="@string/auth_profile_image"
-            android:src="@drawable/ic_profile_placeholder" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_profile_container" />
 
-        <FrameLayout
+        <ImageButton
             android:id="@+id/btnCamera"
-            android:layout_width="@dimen/auth_profile_camera_badge_size"
-            android:layout_height="@dimen/auth_profile_camera_badge_size"
+            android:layout_width="@dimen/auth_profile_camera_button_size"
+            android:layout_height="@dimen/auth_profile_camera_button_size"
             android:layout_gravity="end|bottom"
-            android:layout_marginEnd="@dimen/auth_profile_camera_badge_margin_end"
-            android:layout_marginBottom="@dimen/auth_profile_camera_badge_margin_bottom"
-            android:background="@drawable/bg_profile_camera_badge"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="@dimen/auth_profile_camera_icon_size"
-                android:layout_height="@dimen/auth_profile_camera_icon_size"
-                android:layout_gravity="center"
-                android:contentDescription="@string/auth_profile_camera"
-                android:src="@drawable/ic_camera_badge" />
-
-        </FrameLayout>
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/auth_profile_camera"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_profile_camera_button" />
 
     </FrameLayout>
 
