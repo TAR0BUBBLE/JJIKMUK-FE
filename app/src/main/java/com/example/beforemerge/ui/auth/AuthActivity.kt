@@ -84,7 +84,7 @@ class AuthActivity : AppCompatActivity() {
             .commit()
     }
 
-    var tempNickname: String = "코워커"
+    var tempNickname: String = ""
 
     fun moveToProfileSetting(
         nickname: String,

@@ -50,6 +50,8 @@ class ProfileSettingFragment : Fragment(R.layout.fragment_profile_setting) {
             } else {
                 View.VISIBLE
             }
+
+            (requireActivity() as AuthActivity).tempNickname = it.toString().trim()
         }
     }
 
@@ -117,13 +119,23 @@ class ProfileSettingFragment : Fragment(R.layout.fragment_profile_setting) {
         }
 
         tvEditAllergy.setOnClickListener {
+            val currentNickname = etNickname.text.toString().trim()
+
+            (requireActivity() as AuthActivity).tempNickname = currentNickname
+
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
 
         btnStart.setOnClickListener {
+            val currentNickname = etNickname.text.toString().trim()
+
+            (requireActivity() as AuthActivity).tempNickname = currentNickname
+
+            // TODO: 추후 회원가입/프로필 저장 API 연동
             (requireActivity() as AuthActivity).moveToSignupComplete()
         }
     }
+
     private fun setupKeyboardAwareBottomButton(view: View) {
         val btnStart = view.findViewById<TextView>(R.id.btnStart)
         view.applyKeyboardAwareBottomMargin(btnStart)
