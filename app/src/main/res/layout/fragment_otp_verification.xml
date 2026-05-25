@@ -119,6 +119,75 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/tvOtpError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/auth_otp_error_top_margin"
+        android:includeFontPadding="false"
+        android:text="@string/auth_otp_error_invalid_code"
+        android:textColor="@color/auth_error_red"
+        android:textSize="@dimen/auth_error_text_size"
+        android:textStyle="normal"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/otpInputContainer"
+        app:layout_constraintTop_toBottomOf="@id/otpInputContainer" />
+
+    <LinearLayout
+        android:id="@+id/otpTimerContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/auth_otp_timer_height"
+        android:layout_marginTop="@dimen/auth_otp_timer_top_margin"
+        android:background="@drawable/bg_auth_otp_timer"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/auth_otp_timer_horizontal_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOtpError">
+
+        <TextView
+            android:id="@+id/tvOtpTimerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="@string/auth_otp_timer_prefix"
+            android:textColor="@color/auth_text_secondary"
+            android:textSize="@dimen/auth_otp_timer_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOtpTimerValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/auth_otp_timer_text_gap"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="03:00"
+            android:textColor="@color/auth_otp_timer_green"
+            android:textSize="@dimen/auth_otp_timer_value_text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResendCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/auth_otp_resend_bottom_margin"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/auth_otp_resend_text"
+        android:textColor="@color/auth_text_secondary"
+        android:textSize="@dimen/auth_otp_resend_text_size"
+        app:layout_constraintBottom_toTopOf="@id/btnVerify"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
         android:id="@+id/btnVerify"
         android:layout_width="0dp"
         android:layout_height="@dimen/auth_button_height"

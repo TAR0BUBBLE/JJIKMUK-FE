@@ -60,6 +60,9 @@
     <string name="auth_otp_title">인증번호 입력</string>
     <string name="auth_otp_description">이메일로 보내드린\n인증번호 4자리를 입력해 주세요</string>
     <string name="auth_verify">인증하기</string>
+    <string name="auth_otp_error_invalid_code">인증 번호를 다시 확인해 주세요.</string>
+    <string name="auth_otp_timer_prefix">남은 인증시간</string>
+    <string name="auth_otp_resend_text">인증번호를 받지 못하셨나요? 재전송</string>
 
 
     <!-- =========================
