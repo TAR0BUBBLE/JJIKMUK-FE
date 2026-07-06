@@ -3,7 +3,7 @@
     <!-- =========================
          Auth 기본 입력창 스타일
          사용 화면:
-         - fragment_login_email.xml
+         - fragment_signup_email.xml
          - fragment_forgot_password.xml
          - fragment_new_password.xml
 
@@ -16,7 +16,8 @@
         <item name="android:layout_height">@dimen/auth_input_height</item>
         <item name="android:background">@drawable/bg_auth_input</item>
         <item name="android:includeFontPadding">false</item>
-        <item name="android:paddingHorizontal">@dimen/auth_input_horizontal_padding</item>
+        <item name="android:paddingStart">@dimen/auth_input_horizontal_padding</item>
+        <item name="android:paddingEnd">@dimen/auth_input_horizontal_padding</item>
         <item name="android:singleLine">true</item>
         <item name="android:textColor">@color/auth_text_primary</item>
         <item name="android:textColorHint">@color/auth_text_secondary</item>

@@ -5,7 +5,7 @@
     <!-- =========================
          Auth 공통 문구
          사용 화면:
-         - fragment_login_email.xml
+         - fragment_signup_email.xml
          - fragment_login_password.xml
          - fragment_forgot_password.xml
          - fragment_otp_verification.xml
@@ -13,15 +13,17 @@
          ========================= -->
 
     <string name="auth_back">뒤로가기</string>
+    <string name="auth_welcome_hero">찍먹 시작 화면 음식 이미지</string>
+    <string name="auth_signup">회원가입</string>
 
 
     <!-- =========================
          로그인 이메일 입력 화면
          사용 화면:
-         - fragment_login_email.xml
+         - fragment_signup_email.xml
          ========================= -->
 
-    <string name="auth_login_title">간편하게 찍어 먹자!</string>
+    <string name="auth_login_title">다시 오신 걸 환영해요!\n어떤 걸 찍어 먹어볼까요?</string>
     <string name="auth_login_email_description">로그인 또는 회원가입을 위해\n이메일 주소를 입력해 주세요</string>
     <string name="auth_email_hint">email@example.com</string>
     <string name="auth_confirm">확인</string>
@@ -38,6 +40,11 @@
     <string name="auth_password_visibility_toggle">비밀번호 보기/숨기기</string>
     <string name="auth_forgot_password">비밀번호를 잊으셨나요?</string>
     <string name="auth_login">로그인</string>
+    <string name="auth_error_invalid_credentials">이메일 또는 비밀번호를 다시 확인해 주세요</string>
+    <string name="auth_login_with_google">Or Login with</string>
+    <string name="auth_google_login">Google 로그인</string>
+    <string name="auth_signup_prompt">계정이 없으신가요?</string>
+    <string name="auth_signup_cta">회원가입 하기</string>
 
 
     <!-- =========================
@@ -49,6 +56,8 @@
     <string name="auth_forgot_password_title">비밀번호를 잊으셨나요?</string>
     <string name="auth_forgot_password_description">인증을 위해 계정과 연결된\n이메일 주소를 입력해 주세요</string>
     <string name="auth_send_code">코드 전송하기</string>
+    <string name="auth_signup_email_title">이메일 인증</string>
+    <string name="auth_signup_email_description">회원가입을 위해\n이메일 주소를 인증해 주세요</string>
 
 
     <!-- =========================

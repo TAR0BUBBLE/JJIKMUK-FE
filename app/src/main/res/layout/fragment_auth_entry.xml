@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/ivHero"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/auth_welcome_hero_height"
+        android:contentDescription="@string/auth_welcome_hero"
+        android:scaleType="fitXY"
+        android:src="@drawable/auth_entry_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcomePanel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/auth_welcome_panel_overlap"
+        android:background="@drawable/bg_auth_welcome_panel"
+        android:paddingStart="@dimen/auth_screen_horizontal_padding"
+        android:paddingEnd="@dimen/auth_screen_horizontal_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivHero">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/auth_welcome_logo_size"
+            android:layout_height="@dimen/auth_welcome_logo_size"
+            android:layout_marginTop="@dimen/auth_welcome_logo_top_margin"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/auth_entry_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivWordmark"
+            android:layout_width="@dimen/auth_welcome_wordmark_width"
+            android:layout_height="@dimen/auth_welcome_wordmark_height"
+            android:layout_marginTop="@dimen/auth_welcome_brand_top_margin"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/auth_entry_wordmark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+
+        <TextView
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/auth_button_height"
+            android:layout_marginTop="@dimen/auth_welcome_button_top_margin"
+            android:background="@drawable/bg_auth_primary_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/auth_login"
+            android:textColor="@color/auth_text_primary"
+            android:textSize="@dimen/auth_button_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivWordmark" />
+
+        <TextView
+            android:id="@+id/btnSignup"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/auth_button_height"
+            android:layout_marginTop="@dimen/auth_welcome_secondary_button_top_margin"
+            android:background="@drawable/bg_auth_secondary_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/auth_signup"
+            android:textColor="@color/auth_text_primary"
+            android:textSize="@dimen/auth_button_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

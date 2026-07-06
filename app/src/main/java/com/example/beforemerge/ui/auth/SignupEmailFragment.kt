@@ -8,10 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.beforemerge.R
 
-class ForgotPasswordFragment : Fragment(R.layout.fragment_forgot_password) {
-
-    // TODO: 추후 계정 확인 API 연동 후 제거
-    private val temporaryConnectedEmail = "email@example.com"
+class SignupEmailFragment : Fragment(R.layout.fragment_signup_email) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -39,16 +36,13 @@ class ForgotPasswordFragment : Fragment(R.layout.fragment_forgot_password) {
         btnSendCode.setOnClickListener {
             val email = etEmail.text.toString().trim()
 
-            val isInvalidEmail = !email.isValidEmailFormat()
-            val isNotConnectedEmail = email != temporaryConnectedEmail
-
-            if (isInvalidEmail || isNotConnectedEmail) {
+            if (!email.isValidEmailFormat()) {
                 showEmailError(etEmail, tvEmailError)
                 return@setOnClickListener
             }
 
             hideEmailError(etEmail, tvEmailError)
-            (requireActivity() as AuthActivity).moveToPasswordResetOtpVerification()
+            (requireActivity() as AuthActivity).moveToSignupOtpVerification()
         }
     }
 

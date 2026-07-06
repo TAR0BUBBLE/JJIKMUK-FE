@@ -22,7 +22,7 @@
     <!-- =========================
          Auth 공통 텍스트 색상
          사용 화면:
-         - fragment_login_email.xml
+         - fragment_signup_email.xml
          - fragment_login_password.xml
          - fragment_forgot_password.xml
          - fragment_otp_verification.xml
@@ -64,6 +64,7 @@
 
     <!-- 상단 뒤로가기 아이콘 색상 -->
     <color name="auth_back_gray">#BDBDBD</color>
+    <color name="auth_google_blue">#4285F4</color>
 
 
     <!-- =========================
@@ -88,7 +89,7 @@
 
     <!-- Auth 오류 상태 색상
      사용 화면:
-     - fragment_login_email.xml
+     - fragment_signup_email.xml
      - fragment_login_password.xml
      - fragment_forgot_password.xml
      - fragment_new_password.xml-->

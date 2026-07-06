@@ -32,6 +32,7 @@ class LoginPasswordFragment : Fragment(R.layout.fragment_login_password) {
 
     private fun initClickListeners(view: View) {
         val btnBack = view.findViewById<ImageButton>(R.id.btnBack)
+        val etEmail = view.findViewById<EditText>(R.id.etEmail)
         val etPassword = view.findViewById<EditText>(R.id.etPassword)
         val passwordInputContainer = view.findViewById<View>(R.id.passwordInputContainer)
         val tvPasswordError = view.findViewById<TextView>(R.id.tvPasswordError)
@@ -39,14 +40,21 @@ class LoginPasswordFragment : Fragment(R.layout.fragment_login_password) {
             view.findViewById<ImageButton>(R.id.btnTogglePasswordVisibility)
         val tvForgotPassword = view.findViewById<TextView>(R.id.tvForgotPassword)
         val btnLogin = view.findViewById<TextView>(R.id.btnLogin)
+        val tvSignupLink = view.findViewById<TextView>(R.id.tvSignupLink)
 
         btnBack.setOnClickListener {
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
 
+        etEmail.setOnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                hideLoginError(etEmail, passwordInputContainer, tvPasswordError)
+            }
+        }
+
         etPassword.setOnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
-                hidePasswordError(passwordInputContainer, tvPasswordError)
+                hideLoginError(etEmail, passwordInputContainer, tvPasswordError)
             }
         }
 
@@ -60,22 +68,30 @@ class LoginPasswordFragment : Fragment(R.layout.fragment_login_password) {
 
         btnLogin.setOnClickListener {
             // TODO: 추후 로그인 API 연동 후 실제 비밀번호 검증 결과로 교체
-            showPasswordError(passwordInputContainer, tvPasswordError)
+            showLoginError(etEmail, passwordInputContainer, tvPasswordError)
+        }
+
+        tvSignupLink.setOnClickListener {
+            (requireActivity() as AuthActivity).moveToSignupEmail()
         }
     }
 
-    private fun showPasswordError(
+    private fun showLoginError(
+        etEmail: EditText,
         passwordInputContainer: View,
         tvPasswordError: TextView
     ) {
+        etEmail.setBackgroundResource(R.drawable.bg_auth_input_error)
         passwordInputContainer.setBackgroundResource(R.drawable.bg_auth_input_error)
         tvPasswordError.visibility = View.VISIBLE
     }
 
-    private fun hidePasswordError(
+    private fun hideLoginError(
+        etEmail: EditText,
         passwordInputContainer: View,
         tvPasswordError: TextView
     ) {
+        etEmail.setBackgroundResource(R.drawable.bg_auth_input)
         passwordInputContainer.setBackgroundResource(R.drawable.bg_auth_input)
         tvPasswordError.visibility = View.GONE
     }

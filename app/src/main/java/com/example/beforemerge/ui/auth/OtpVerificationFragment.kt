@@ -23,6 +23,10 @@ class OtpVerificationFragment : Fragment(R.layout.fragment_otp_verification) {
 
     private var countDownTimer: CountDownTimer? = null
     private var hasOtpError = false
+    private val mode: Mode by lazy {
+        val rawMode = arguments?.getString(ARG_MODE)
+        Mode.values().firstOrNull { it.name == rawMode } ?: Mode.PASSWORD_RESET
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -68,7 +72,11 @@ class OtpVerificationFragment : Fragment(R.layout.fragment_otp_verification) {
             )
 
             // TODO: 추후 인증번호 검증 API 연동 예정
-            (requireActivity() as AuthActivity).moveToNewPassword()
+            if (mode == Mode.SIGNUP) {
+                (requireActivity() as AuthActivity).moveToCreatePassword()
+            } else {
+                (requireActivity() as AuthActivity).moveToNewPassword()
+            }
         }
     }
 
@@ -301,9 +309,23 @@ class OtpVerificationFragment : Fragment(R.layout.fragment_otp_verification) {
     }
 
     companion object {
+        private const val ARG_MODE = "mode"
         private const val TEMP_VALID_OTP_CODE = "1234"
 
         private const val OTP_TIMER_TOTAL_MILLIS = 3 * 60 * 1000L
         private const val OTP_TIMER_INTERVAL_MILLIS = 1000L
+
+        fun newInstance(mode: Mode): OtpVerificationFragment {
+            return OtpVerificationFragment().apply {
+                arguments = Bundle().apply {
+                    putString(ARG_MODE, mode.name)
+                }
+            }
+        }
+    }
+
+    enum class Mode {
+        PASSWORD_RESET,
+        SIGNUP
     }
 }

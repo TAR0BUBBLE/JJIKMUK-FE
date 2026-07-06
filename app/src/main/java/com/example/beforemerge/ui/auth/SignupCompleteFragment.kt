@@ -34,7 +34,7 @@ class SignupCompleteFragment : Fragment(R.layout.fragment_password_change_comple
         val btnGoLogin = view.findViewById<TextView>(R.id.btnGoLogin)
 
         btnGoLogin.setOnClickListener {
-            (requireActivity() as AuthActivity).moveToLoginEmail()
+            (requireActivity() as AuthActivity).moveToLogin()
         }
     }
 }

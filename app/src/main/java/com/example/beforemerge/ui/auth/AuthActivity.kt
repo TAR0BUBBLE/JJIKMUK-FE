@@ -12,14 +12,21 @@ class AuthActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.authFragmentContainer, LoginEmailFragment())
+                .replace(R.id.authFragmentContainer, AuthEntryFragment())
                 .commit()
         }
     }
 
-    fun moveToLoginPassword() {
+    fun moveToLogin() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.authFragmentContainer, LoginPasswordFragment())
+            .addToBackStack(null)
+            .commit()
+    }
+
+    fun moveToSignupEmail() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.authFragmentContainer, SignupEmailFragment())
             .addToBackStack(null)
             .commit()
     }
@@ -31,9 +38,22 @@ class AuthActivity : AppCompatActivity() {
             .commit()
     }
 
-    fun moveToOtpVerification() {
+    fun moveToPasswordResetOtpVerification() {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.authFragmentContainer, OtpVerificationFragment())
+            .replace(
+                R.id.authFragmentContainer,
+                OtpVerificationFragment.newInstance(OtpVerificationFragment.Mode.PASSWORD_RESET)
+            )
+            .addToBackStack(null)
+            .commit()
+    }
+
+    fun moveToSignupOtpVerification() {
+        supportFragmentManager.beginTransaction()
+            .replace(
+                R.id.authFragmentContainer,
+                OtpVerificationFragment.newInstance(OtpVerificationFragment.Mode.SIGNUP)
+            )
             .addToBackStack(null)
             .commit()
     }
@@ -52,14 +72,14 @@ class AuthActivity : AppCompatActivity() {
             .commit()
     }
 
-    fun moveToLoginEmail() {
+    fun moveToAuthEntry() {
         supportFragmentManager.popBackStack(
             null,
             androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE
         )
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.authFragmentContainer, LoginEmailFragment())
+            .replace(R.id.authFragmentContainer, AuthEntryFragment())
             .commit()
     }
 

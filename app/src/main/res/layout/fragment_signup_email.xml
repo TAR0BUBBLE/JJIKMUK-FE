@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:paddingHorizontal="@dimen/auth_screen_horizontal_padding">
+    android:paddingStart="@dimen/auth_screen_horizontal_padding"
+    android:paddingEnd="@dimen/auth_screen_horizontal_padding">
 
     <ImageButton
         android:id="@+id/btnBack"
@@ -29,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/auth_title_top_margin"
         android:includeFontPadding="false"
-        android:text="@string/auth_login_title"
+        android:text="@string/auth_signup_email_title"
         android:textColor="@color/auth_text_primary"
         android:textSize="@dimen/auth_title_text_size"
         android:textStyle="bold"
@@ -43,7 +44,7 @@
         android:layout_marginTop="@dimen/auth_description_top_margin"
         android:includeFontPadding="false"
         android:lineSpacingExtra="2dp"
-        android:text="@string/auth_login_email_description"
+        android:text="@string/auth_signup_email_description"
         android:textColor="@color/auth_text_secondary"
         android:textSize="@dimen/auth_description_text_size"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +62,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvDescription" />
 
-
     <TextView
         android:id="@+id/tvEmailError"
         android:layout_width="wrap_content"
@@ -71,14 +71,12 @@
         android:text="@string/auth_error_invalid_email_format"
         android:textColor="@color/auth_error_red"
         android:textSize="@dimen/auth_error_text_size"
-        android:textStyle="normal"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/etEmail"
         app:layout_constraintTop_toBottomOf="@id/etEmail" />
 
-
     <TextView
-        android:id="@+id/btnConfirm"
+        android:id="@+id/btnSendCode"
         android:layout_width="0dp"
         android:layout_height="@dimen/auth_button_height"
         android:layout_marginBottom="@dimen/auth_button_bottom_margin"
@@ -87,7 +85,7 @@
         android:focusable="true"
         android:gravity="center"
         android:includeFontPadding="false"
-        android:text="@string/auth_confirm"
+        android:text="@string/auth_send_code"
         android:textColor="@color/auth_text_primary"
         android:textSize="@dimen/auth_button_text_size"
         android:textStyle="bold"
